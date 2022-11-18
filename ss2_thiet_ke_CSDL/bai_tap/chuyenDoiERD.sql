@@ -61,3 +61,9 @@ add MaNCC int not null;
 
 alter table dondh
 add foreign key(MaNCC) references NhaCC(MaNCC);
+
+create table Sdt(
+	id int primary key,
+    MaNCC int auto_increment not null,
+    foreign key(MaNCC) references NhaCC(MaNCC)
+);
