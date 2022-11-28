@@ -1,0 +1,11 @@
+ol{
+    list-style: upper-roman;
+    font-size: 25px;
+}
+
+li:first-child{
+    margin-top: 10px;
+}
+a{
+    margin-left: 15px;
+}

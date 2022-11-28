@@ -1,5 +1,6 @@
 -- 2.	Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 kí tự.
-select * from nhan_vien where (ho_ten like "% H%_" or ho_ten like "% T%_" or ho_ten like "% K%_")  and LENGTH(ho_ten) <= 15;
+-- select * from nhan_vien where (ho_ten like "% H%_" or ho_ten like "% T%_" or ho_ten like "% K%_")  and LENGTH(ho_ten) <= 15;
+select * from nhan_vien where (ho_ten like "H%" or ho_ten like "T%" or ho_ten like "K%")  and char_length(ho_ten) <= 15;
 
 
 --  3.	Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
@@ -111,18 +112,25 @@ group by hd.ma_hop_dong;
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
 -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
 
-create view view_so_luong as
+drop view view_so_luong;
 select sum(hdct.so_luong) as so_luong_dat from dich_vu_di_kem dvdk
 join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
 join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
 group by dvdk.ma_dich_vu_di_kem
-order by so_luong_dat desc;
+order by so_luong_dat desc
+limit 1;
 
 select dvdk.ten_dich_vu_di_kem, sum(hdct.so_luong) as so_luong_dat from dich_vu_di_kem dvdk
 join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
 join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
 group by dvdk.ma_dich_vu_di_kem
-having so_luong_dat in (select max(so_luong_dat) from view_so_luong);
+having so_luong_dat = (select sum(hdct.so_luong) as so_luong_dat from dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
+group by dvdk.ma_dich_vu_di_kem
+order by so_luong_dat desc
+limit 1);
+
 
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất
 -- . Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).

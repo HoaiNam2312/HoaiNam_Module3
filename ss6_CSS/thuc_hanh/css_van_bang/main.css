@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+html{
+    font-size: 62.5%;
+}
+div{
+    font-size: 3rem;
+    color: darkgreen;
+    background-color: cadetblue;
+    text-align: justify;
+
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border: 10px solid red;
+}

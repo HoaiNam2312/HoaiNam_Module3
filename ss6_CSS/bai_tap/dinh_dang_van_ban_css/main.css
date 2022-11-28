@@ -1,0 +1,21 @@
+h1{
+    margin-bottom: 0;
+    font-size: 60px;
+}
+hr{
+    margin: 0;
+}
+.ten p{
+    margin-top: 5px;
+    font-size: 30px;
+}
+.tenRieng{
+    color: blue;
+}
+.noidung p{
+    font-size: 25px;
+    text-indent: 50px;
+}
+.mu {
+    font-size: 14px;
+}
