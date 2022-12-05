@@ -13,7 +13,7 @@
             margin: 0;
         }
         .grid.wide {
-            min-height: 200vh;
+            min-height: 100vh;
         }
          .header {
             height: 60px;
@@ -59,9 +59,7 @@
             color: red;
         }
 
-        /*.text {*/
-        /*    margin-left: 30px;*/
-        /*}*/
+
 
         .button {
             height: 70px;
@@ -100,6 +98,18 @@
                 font-size: 40px;
             }
         }
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            min-height: 100px;
+            background-color: #333333;
+        }
+        .footer p {
+            text-align: center;
+            line-height: 100px;
+            color: #cccccc;
+        }
     </style>
 </head>
 <body>
@@ -123,28 +133,8 @@
         <a href="#">Login</a>
     </div>
 </div>
-    <div class="grid wide">
-<!--        <div class="row no-gutters header">-->
-<!--            <div class="col l-1 m-2 c-6 nav">-->
-<!--                <a href="#">Logo</a>-->
-<!--            </div>-->
-<!--            <div class="col l-1 m-2 c-0 nav">-->
-<!--                <a href="#">Home</a>-->
-<!--            </div>-->
-<!--            <div class="col l-1 m-2 c-0 nav">-->
-<!--                <a href="#">About</a>-->
-<!--            </div>-->
-<!--            <div class="col l-1 m-2 c-0 nav">-->
-<!--                <a href="#">Projects</a>-->
-<!--            </div>-->
-<!--            <div class="col l-1 m-2 c-0 nav">-->
-<!--                <a href="#">Contact</a>-->
-<!--            </div>-->
-<!--            <div class="col l-1 l-o-6 m-2 c-6 nav">-->
-<!--                <a href="#">Login</a>-->
-<!--            </div>-->
-<!--        </div>-->
 
+    <div class="grid wide">
 
         <div class="row no-gutters content">
 
@@ -208,11 +198,9 @@
                 </div>
             </div>
         </div>
-
-        <div class="row footer">
-
-        </div>
-
     </div>
+<div class="footer">
+    <p>Footer</p>
+</div>
 </body>
 </html>
