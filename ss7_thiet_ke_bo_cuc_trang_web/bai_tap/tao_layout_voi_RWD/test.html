@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="../../../grid.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .grid.wide {
+            min-height: 200vh;
+        }
+         .header {
+            height: 60px;
+            background-color: black;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .nav {
+            text-align: center;
+            line-height: 60px;
+        }
+        .content {
+            margin-top: 60px;
+        }
+        .nav a,.content a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .nav:hover {
+            background-color: #ccc;
+        }
+        .nav:hover a {
+            color: #000;
+        }
+        .content .l-2 {
+            min-height: 100vh;
+            background-color: whitesmoke;
+        }
+
+        .link a {
+            font-size: 20px;
+            color: blue;
+        }
+        .link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .link:hover a {
+            color: red;
+        }
+
+        /*.text {*/
+        /*    margin-left: 30px;*/
+        /*}*/
+
+        .button {
+            height: 70px;
+            margin-top: 20px;
+            border: 2px solid rgba(55,55,55,0.2);
+            text-align: center;
+            line-height: 70px;
+        }
+        .button:hover {
+            background-color: #ccc;
+        }
+        .button a{
+            color: black;
+        }
+        @media screen and (min-width: 740px) and (max-width: 1023px) {
+            .header {
+                font-size: 25px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+            .content {
+                font-size: 25px;
+            }
+        }
+        @media screen and (max-width: 739px) {
+            .header {
+                font-size: 60px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+            .content {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="row no-gutters header">
+    <div class="col l-1 m-2 c-6 nav">
+        <a href="#">Logo</a>
+    </div>
+    <div class="col l-1 m-2 c-0 nav">
+        <a href="#">Home</a>
+    </div>
+    <div class="col l-1 m-2 c-0 nav">
+        <a href="#">About</a>
+    </div>
+    <div class="col l-1 m-2 c-0 nav">
+        <a href="#">Projects</a>
+    </div>
+    <div class="col l-1 m-2 c-0 nav">
+        <a href="#">Contact</a>
+    </div>
+    <div class="col l-1 l-o-6 m-2 c-6 nav">
+        <a href="#">Login</a>
+    </div>
+</div>
+    <div class="grid wide">
+<!--        <div class="row no-gutters header">-->
+<!--            <div class="col l-1 m-2 c-6 nav">-->
+<!--                <a href="#">Logo</a>-->
+<!--            </div>-->
+<!--            <div class="col l-1 m-2 c-0 nav">-->
+<!--                <a href="#">Home</a>-->
+<!--            </div>-->
+<!--            <div class="col l-1 m-2 c-0 nav">-->
+<!--                <a href="#">About</a>-->
+<!--            </div>-->
+<!--            <div class="col l-1 m-2 c-0 nav">-->
+<!--                <a href="#">Projects</a>-->
+<!--            </div>-->
+<!--            <div class="col l-1 m-2 c-0 nav">-->
+<!--                <a href="#">Contact</a>-->
+<!--            </div>-->
+<!--            <div class="col l-1 l-o-6 m-2 c-6 nav">-->
+<!--                <a href="#">Login</a>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+        <div class="row no-gutters content">
+
+            <div class="col l-2 m-2 c-0">
+                <div class="row no-gutters link">
+                    <div class="col l-10 l-o-1 m-10 m-o-1">
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+
+                <div class="row no-gutters link">
+                    <div class="col l-10 l-o-1 m-10 m-o-1">
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+
+                <div class="row no-gutters link">
+                    <div class="col l-10 l-o-1 m-10 m-o-1 c-0">
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col l-8 m-8 c-12">
+                <div class="row">
+                    <div class="col l-10 l-o-1 m-10 m-o-1  c-10 c-o-1 text">
+                        <h1>Wellcome</h1>
+                    </div>
+                    <div class="col l-10 l-o-1 m-10 m-o-1  c-10 c-o-1 text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         Excepteur sint occaecat non proident, sunt in culpa qui offcia deserunt
+                         mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                         ut aliquip ex ea commodo consequat</p>
+                    </div>
+                    <div class="col l-10 l-o-1 m-10 m-o-1  c-10 c-o-1 text">
+                        <h1>Test</h1>
+                    </div>
+                    <div class="col l-10 l-o-1 m-10 m-o-1  c-10 c-o-1 text">
+                        <p>Sóng bắt đầu từ gió <br>
+                            Gió bắt đầu từ đâu? <br>
+                            Em cũng không biết nữa <br>
+                            Khi nào ta yêu nhau.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col l-2 m-2 c-0">
+                <div class="row no-gutters">
+                    <div class="col l-10 l-o-1 m-10 m-o-1 button">
+                        <a href="#">ADS</a>
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="col l-10 l-o-1 m-10 m-o-1 button">
+                        <a href="#">ADS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row footer">
+
+        </div>
+
+    </div>
+</body>
+</html>
